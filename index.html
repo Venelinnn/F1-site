@@ -1,82 +1,198 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Формула 1 Болид – Структура и Технически Характеристики</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InsideF1 – Технически характеристики и всичко за Формула 1</title>
   <style>
+    /* Reset и базов стил */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #c00;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    nav {
-      background-color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #eee;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      height: 100vh;
+      overflow: hidden;
     }
-    nav a {
-      color: white;
+    /* Sidebar */
+    nav.sidebar {
+      background-color: #1f1f1f;
+      width: 220px;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 2px solid #c00;
+    }
+    nav.sidebar a {
+      color: #ccc;
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
     }
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
+    nav.sidebar a:hover,
+    nav.sidebar a.active {
+      background-color: #c00;
+      color: white;
     }
-    h2 {
+    /* Main content */
+    main.content {
+      flex: 1;
+      padding: 30px 40px;
+      overflow-y: auto;
+    }
+    main.content h1 {
+      color: #c00;
+      margin-top: 0;
+      font-size: 32px;
+    }
+    main.content h2 {
       color: #e53935;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    main.content p, main.content ul {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    main.content ul {
+      padding-left: 20px;
+    }
+    main.content ul li {
+      margin-bottom: 8px;
+    }
+    /* Responsive за по-малки екрани */
+    @media (max-width: 700px) {
+      body {
+        flex-direction: column;
+      }
+      nav.sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 2px solid #c00;
+      }
+      nav.sidebar a {
+        flex: 1;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 14px;
+      }
+      main.content {
+        padding: 20px;
+        height: calc(100vh - 50px);
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Формула 1: Структура на болида</h1>
-  </header>
-  
-  <nav>
-    <a href="#aero">Аеродинамика</a>
-    <a href="#engine">Двигател</a>
-    <a href="#suspension">Окачване</a>
-    <a href="#specs">Характеристики</a>
+  <nav class="sidebar">
+    <a href="#" class="active" data-section="tech">Технически характеристики</a>
+    <a href="#" data-section="evolution">Еволюция на болидите</a>
+    <a href="#" data-section="rules">Правила</a>
+    <a href="#" data-section="tracks">Писти</a>
+    <a href="#" data-section="championship">Идея на шампионата</a>
+    <a href="#" data-section="others">Други</a>
   </nav>
 
-  <section id="aero">
+  <main class="content" id="content">
+    <!-- Тук ще се показва съдържанието -->
+    <h1>Технически характеристики</h1>
+    <p>Формула 1 болидите са върха на технологиите – от V6 турбо хибридни двигатели до аеродинамика, която достига почти космически нива.</p>
+    <h2>Двигател и система</h2>
+    <p>Мощност над 1000 к.с., комбинирани с електрически системи като MGU-K и MGU-H, които връщат енергия при спиране.</p>
     <h2>Аеродинамика</h2>
-    <p>Аеродинамиката играе ключова роля във Формула 1. Всяко крило и форма е проектирано да увеличи притискането и да намали въздушното съпротивление.</p>
-  </section>
-
-  <section id="engine">
-    <h2>Двигател и хибридна система</h2>
-    <p>Съвременните болиди използват V6 хибридни двигатели с мощност над 1000 конски сили, включващи електрически системи като MGU-K и MGU-H.</p>
-  </section>
-
-  <section id="suspension">
+    <p>Всяка част от колата е проектирана за максимално притискане и минимално съпротивление.</p>
     <h2>Окачване</h2>
-    <p>Окачването е супер твърдо, за да държи гумите максимално близо до асфалта при високи скорости и завои.</p>
-  </section>
+    <p>Изключително твърдо и прецизно, за да поддържа максимален контакт с пистата при завои.</p>
+  </main>
 
-  <section id="specs">
-    <h2>Основни характеристики</h2>
-    <ul>
-      <li>Максимална скорост: ~360 км/ч</li>
-      <li>0–100 км/ч: ~2.6 секунди</li>
-      <li>Тегло: ~798 кг (вкл. пилот)</li>
-    </ul>
-  </section>
+  <script>
+    // JS за превключване на секции
+    const links = document.querySelectorAll('nav.sidebar a');
+    const content = document.getElementById('content');
+
+    const sections = {
+      tech: `
+        <h1>Технически характеристики</h1>
+        <p>Формула 1 болидите са върха на технологиите – от V6 турбо хибридни двигатели до аеродинамика, която достига почти космически нива.</p>
+        <h2>Двигател и система</h2>
+        <p>Мощност над 1000 к.с., комбинирани с електрически системи като MGU-K и MGU-H, които връщат енергия при спиране.</p>
+        <h2>Аеродинамика</h2>
+        <p>Всяка част от колата е проектирана за максимално притискане и минимално съпротивление.</p>
+        <h2>Окачване</h2>
+        <p>Изключително твърдо и прецизно, за да поддържа максимален контакт с пистата при завои.</p>
+      `,
+      evolution: `
+        <h1>Еволюция на болидите във Формула 1</h1>
+        <p>От първите състезателни коли през 1950 до модерните хибридни чудовища – технологиите непрекъснато се развиват.</p>
+        <ul>
+          <li>1950-те: Прост дизайн и много механична настройка.</li>
+          <li>1980-те: Въвеждане на турбо двигатели и подобрена аеродинамика.</li>
+          <li>2000-те: Хибридни технологии и компютърна телеметрия.</li>
+          <li>2020+: Използване на сложни материали и оптимизирана енергийна ефективност.</li>
+        </ul>
+      `,
+      rules: `
+        <h1>Правила във Формула 1</h1>
+        <p>Правилата гарантират безопасност, честна игра и технологичен баланс.</p>
+        <ul>
+          <li>Максимално тегло на колата</li>
+          <li>Ограничения на двигателя и горивото</li>
+          <li>Безопасност: Halo системи и защити на пилота</li>
+          <li>Регулации за аеродинамика</li>
+        </ul>
+      `,
+      tracks: `
+        <h1>Писти във Формула 1</h1>
+        <p>От легендарни като Монако и Силвърстоун, до нови писти като Джеда – всяка има своя характер.</p>
+        <ul>
+          <li>Монте Карло (Монако)</li>
+          <li>Силвърстоун (Великобритания)</li>
+          <li>Сузука (Япония)</li>
+          <li>Монца (Италия)</li>
+          <li>Джеда (Саудитска Арабия)</li>
+        </ul>
+      `,
+      championship: `
+        <h1>Идея на шампионата във Формула 1</h1>
+        <p>Шампионатът комбинира пилоти и отбори, които се състезават за точки и титли през сезона.</p>
+        <ul>
+          <li>Гран при: Индивидуални състезания</li>
+          <li>Точки за класиране</li>
+          <li>Титла на световен шампион при пилотите</li>
+          <li>Титла на конструкторски шампионат</li>
+        </ul>
+      `,
+      others: `
+        <h1>Други теми за Формула 1</h1>
+        <p>Можем да добавим още теми като безопасност, стратегии, пилоти и история.</p>
+      `
+    };
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        // махни active от всички
+        links.forEach(l => l.classList.remove('active'));
+
+        // сложи active на кликнатия
+        link.classList.add('active');
+
+        // смени съдържанието
+        const section = link.getAttribute('data-section');
+        content.innerHTML = sections[section];
+      });
+    });
+  </script>
 </body>
 </html>
+
