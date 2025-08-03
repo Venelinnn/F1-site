@@ -1,123 +1,67 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>InsideF1 - Вътре в света на Формула 1</title>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width, initial‑scale=1">
+  <title>InsideF1 – Вътре в света на Формула 1</title>
   <style>
-    /* Нулиране */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body, html { height:100%; font-family:Arial,sans-serif; background:#121212; color:#eee; overflow-x:hidden; }
+    .hero {
+      position:relative; height:70vh; display:flex; justify-content:center; align-items:center;
+      overflow:hidden;
     }
-
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212; /* тъмно, но не черно */
-      color: #eee;
-      overflow-x: hidden;
+    .hero .bgcar {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      background: url('https://images.unsplash.com/photo-...') center/cover no-repeat;
+      filter: brightness(0.3); opacity:0;
+      animation:fadeIn 2s forwards;
+      z-index:-1;
     }
-
-    /* Контейнер с фон и анимация */
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-      filter: brightness(0.3); /* прави снимката бледа */
-      opacity: 0;
-      animation: fadeIn 2.5s forwards;
-      z-index: -1;
+    @keyframes fadeIn { to { opacity:1; } }
+    .hero .text {
+      position:relative; text-align:center; padding: 0 1rem;
     }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    /* Съдържание */
-    .container {
-      position: relative;
-      min-height: 100vh;
-      padding: 2rem 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: #e10600; /* класическо F1 червено */
-      text-shadow: 0 0 10px rgba(225, 6, 0, 0.6);
-    }
-
-    p.slogan {
-      font-size: 1.5rem;
-      max-width: 600px;
-      line-height: 1.4;
-      color: #ccc;
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
-    }
-
-    /* Меню (пример) */
+    h1 { font-size:4rem; color:#e10600; text-shadow:0 0 10px rgba(225,6,0,0.5); }
+    p { font-size:1.3rem; color:#ccc; margin-top:1rem; max-width:800px; }
     nav {
-      margin-top: 2rem;
+      margin-top:2rem;
+      display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;
     }
-
     nav a {
-      color: #eee;
-      text-decoration: none;
-      margin-right: 1.8rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      color:#eee; text-decoration:none; font-weight:600; padding:0.5rem 1rem;
+      transition:color 0.3s;
     }
-
-    nav a:hover {
-      color: #e10600;
-      text-shadow: 0 0 8px rgba(225, 6, 0, 0.8);
-    }
-
-    /* Отзивчивост */
-    @media (max-width: 600px) {
-      .container {
-        padding: 2rem;
-      }
-      h1 {
-        font-size: 2.4rem;
-      }
-      p.slogan {
-        font-size: 1.1rem;
-      }
-      nav a {
-        font-size: 1rem;
-        margin-right: 1rem;
-      }
+    nav a:hover { color:#e10600; }
+    @media(max-width:700px){
+      h1 { font-size:2.6rem; }
+      p { font-size:1rem; }
+      nav { gap:1rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="background"></div>
-
-  <div class="container">
-    <h1>InsideF1</h1>
-    <p class="slogan">Вътре в света на Формула 1 — технологии, история, страст.</p>
-
-    <nav>
-      <a href="#">Технически характеристики</a>
-      <a href="#">Еволюция на болидите</a>
-      <a href="#">Правила</a>
-      <a href="#">Писти</a>
-      <a href="#">Идея на шампионата</a>
-      <a href="#">Други</a>
-    </nav>
+  <div class="hero">
+    <div class="bgcar"></div>
+    <div class="text">
+      <h1>InsideF1</h1>
+      <p>Запознай се с Red Bull RB21 – болидът на 2025 г. с ново техническо бъдеще.</p>
+      <nav>
+        <a href="#">Технически характеристики</a>
+        <a href="#">Еволюция</a>
+        <a href="#">Правила</a>
+        <a href="#">Писти</a>
+        <a href="#">Идея на шампионата</a>
+        <a href="#">Други</a>
+      </nav>
+    </div>
   </div>
+
+  <main>
+    <!-- След това идва съдържанието по секции -->
+  </main>
 
 </body>
 </html>
+
