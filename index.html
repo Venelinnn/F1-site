@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1">
-  <title>InsideF1 – Вътре в света на Формула 1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InsideF1 – Вътре в света на Формула 1</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body, html { height:100%; font-family:Arial,sans-serif; background:#121212; color:#eee; overflow-x:hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
+    }
     .hero {
-      position:relative; height:70vh; display:flex; justify-content:center; align-items:center;
-      overflow:hidden;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
     }
-    .hero .bgcar {
-      position:absolute; top:0; left:0; width:100%; height:100%;
-      background: url('https://images.unsplash.com/photo-...') center/cover no-repeat;
-      filter: brightness(0.3); opacity:0;
-      animation:fadeIn 2s forwards;
-      z-index:-1;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://cdn.racefans.net/wp-content/uploads/2024/02/motor-racing-formula-one-red-bull-racing-rb20-launch-2024-2.jpg') center center / cover no-repeat;
+      opacity: 0.15;
+      z-index: -1;
+      animation: fadeIn 2s ease-in-out forwards;
     }
-    @keyframes fadeIn { to { opacity:1; } }
-    .hero .text {
-      position:relative; text-align:center; padding: 0 1rem;
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 0.15; }
     }
-    h1 { font-size:4rem; color:#e10600; text-shadow:0 0 10px rgba(225,6,0,0.5); }
-    p { font-size:1.3rem; color:#ccc; margin-top:1rem; max-width:800px; }
-    nav {
-      margin-top:2rem;
-      display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;
+    h1 {
+      font-size: 4rem;
+      color: #e10600;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     }
-    nav a {
-      color:#eee; text-decoration:none; font-weight:600; padding:0.5rem 1rem;
-      transition:color 0.3s;
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 1rem;
     }
-    nav a:hover { color:#e10600; }
-    @media(max-width:700px){
-      h1 { font-size:2.6rem; }
-      p { font-size:1rem; }
-      nav { gap:1rem; }
+    @media (max-width: 700px) {
+      h1 { font-size: 2.5rem; }
+      p { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="bgcar"></div>
+  <section class="hero">
     <div class="text">
       <h1>InsideF1</h1>
-      <p>Запознай се с Red Bull RB21 – болидът на 2025 г. с ново техническо бъдеще.</p>
-      <nav>
-        <a href="#">Технически характеристики</a>
-        <a href="#">Еволюция</a>
-        <a href="#">Правила</a>
-        <a href="#">Писти</a>
-        <a href="#">Идея на шампионата</a>
-        <a href="#">Други</a>
-      </nav>
+      <p>Вътре в света на Формула 1 – всичко за колите, правилата, пистите и още</p>
     </div>
-  </div>
-
-  <main>
-    <!-- След това идва съдържанието по секции -->
-  </main>
+  </section>
 
 </body>
 </html>
