@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Формула 1 Болид – Структура и Технически Характеристики</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InsideF1</title>
   <style>
-    body {
-      margin: 0;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #f0f0f0;
-      line-height: 1.6;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      overflow: hidden;
     }
-    header {
-      background-color: #c00;
-      padding: 20px;
-      text-align: center;
+
+    .navbar {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      z-index: 10;
+      animation: fadeIn 2s ease-in-out;
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
+
+    .logo {
+      font-size: 2rem;
+      color: #e10600;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(225,6,0,0.5);
     }
-    nav {
-      background-color: #222;
+
+    .hero {
+      width: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+
+    h1 {
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    h2 {
-      color: #e53935;
+
+    @media (max-width: 600px) {
+      .logo { font-size: 1.5rem; }
+      h1 { font-size: 2.5rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Формула 1: Структура на болида</h1>
-  </header>
-  
-  <nav>
-    <a href="#aero">Аеродинамика</a>
-    <a href="#engine">Двигател</a>
-    <a href="#suspension">Окачване</a>
-    <a href="#specs">Характеристики</a>
-  </nav>
+  <div class="navbar">
+    <div class="logo">InsideF1</div>
+  </div>
 
-  <section id="aero">
-    <h2>Аеродинамика</h2>
-    <p>Аеродинамиката играе ключова роля във Формула 1. Всяко крило и форма е проектирано да увеличи притискането и да намали въздушното съпротивление.</p>
-  </section>
-
-  <section id="engine">
-    <h2>Двигател и хибридна система</h2>
-    <p>Съвременните болиди използват V6 хибридни двигатели с мощност над 1000 конски сили, включващи електрически системи като MGU-K и MGU-H.</p>
-  </section>
-
-  <section id="suspension">
-    <h2>Окачване</h2>
-    <p>Окачването е супер твърдо, за да държи гумите максимално близо до асфалта при високи скорости и завои.</p>
-  </section>
-
-  <section id="specs">
-    <h2>Основни характеристики</h2>
-    <ul>
-      <li>Максимална скорост: ~360 км/ч</li>
-      <li>0–100 км/ч: ~2.6 секунди</li>
-      <li>Тегло: ~798 кг (вкл. пилот)</li>
-    </ul>
+  <section class="hero">
+    <h1>Добре дошъл!</h1>
   </section>
 </body>
 </html>
