@@ -1,128 +1,83 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>InsideF1 – Вътре в света на Формула 1</title>
-<style>
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body, html{height:100%;font-family:Arial,sans-serif;background:#0d0d0d;color:#fff;overflow-x:hidden;}
-  .hero{
-    position:relative;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:2rem;
-  }
-  .hero::before{
-    content:"";
-    position:absolute;
-    top:0;left:0;width:100%;height:100%;
-    background:url('https://cdn.racefans.net/wp-content/uploads/2024/02/motor-racing-formula-one-red-bull-racing-rb20-launch-2024-2.jpg') center/cover no-repeat;
-    opacity:0.15;
-    z-index:-1;
-    animation:fadeIn 2s ease-in-out forwards;
-  }
-  @keyframes fadeIn{
-    0%{opacity:0;}
-    100%{opacity:0.15;}
-  }
-  h1{
-    font-size:4rem;
-    color:#e10600;
-    text-shadow:0 0 10px rgba(0,0,0,0.6);
-  }
-  p{
-    font-size:1.2rem;
-    color:#ccc;
-    margin-top:1rem;
-  }
-  nav{
-    position:fixed;
-    top:0;left:0;
-    width:100%;
-    background:#111;
-    display:flex;
-    justify-content:center;
-    gap:2rem;
-    padding:1rem 0;
-    z-index:10;
-  }
-  nav a{
-    color:#eee;
-    text-decoration:none;
-    font-weight:600;
-    transition:color .3s;
-  }
-  nav a:hover{
-    color:#e10600;
-  }
-  main{
-    max-width:900px;
-    margin:120px auto 40px auto;
-    padding:0 1rem;
-  }
-  section{
-    margin-bottom:3rem;
-  }
-  section h2{
-    border-bottom:2px solid #e10600;
-    padding-bottom:0.5rem;
-    margin-bottom:1rem;
-  }
-  @media (max-width:700px){
-    h1{font-size:2.5rem;}
-    p{font-size:1rem;}
-    nav{flex-wrap:wrap;gap:1rem;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Формула 1 Болид – Структура и Технически Характеристики</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #c00;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #e53935;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Формула 1: Структура на болида</h1>
+  </header>
+  
+  <nav>
+    <a href="#aero">Аеродинамика</a>
+    <a href="#engine">Двигател</a>
+    <a href="#suspension">Окачване</a>
+    <a href="#specs">Характеристики</a>
+  </nav>
 
-<nav>
-  <a href="#tech">Технически характеристики</a>
-  <a href="#evolution">Еволюция</a>
-  <a href="#rules">Правила</a>
-  <a href="#tracks">Писти</a>
-  <a href="#championship">Шампионат</a>
-  <a href="#history">История</a>
-</nav>
+  <section id="aero">
+    <h2>Аеродинамика</h2>
+    <p>Аеродинамиката играе ключова роля във Формула 1. Всяко крило и форма е проектирано да увеличи притискането и да намали въздушното съпротивление.</p>
+  </section>
 
-<section class="hero" aria-label="Начална страница">
-  <div class="text">
-    <h1>InsideF1</h1>
-    <p>Вътре в света на Формула 1 – всичко за колите, правилата, пистите и още</p>
-  </div>
-</section>
+  <section id="engine">
+    <h2>Двигател и хибридна система</h2>
+    <p>Съвременните болиди използват V6 хибридни двигатели с мощност над 1000 конски сили, включващи електрически системи като MGU-K и MGU-H.</p>
+  </section>
 
-<main>
-  <section id="tech">
-    <h2>Технически характеристики</h2>
-    <p>Информация за двигатели, аеродинамика, шасита и други технически детайли на болидите.</p>
+  <section id="suspension">
+    <h2>Окачване</h2>
+    <p>Окачването е супер твърдо, за да държи гумите максимално близо до асфалта при високи скорости и завои.</p>
   </section>
-  <section id="evolution">
-    <h2>Еволюция</h2>
-    <p>Развитие на технологиите и правилата във Формула 1 през годините.</p>
-  </section>
-  <section id="rules">
-    <h2>Правила</h2>
-    <p>Обяснение на основните правила и регулации в шампионата.</p>
-  </section>
-  <section id="tracks">
-    <h2>Писти</h2>
-    <p>Описание и характеристики на най-известните писти в календара.</p>
-  </section>
-  <section id="championship">
-    <h2>Шампионат</h2>
-    <p>Как работи точкуването и идеята зад Формула 1 като шампионат.</p>
-  </section>
-  <section id="history">
-    <h2>История</h2>
-    <p>Кратка история и ключови моменти от света на Формула 1.</p>
-  </section>
-</main>
 
+  <section id="specs">
+    <h2>Основни характеристики</h2>
+    <ul>
+      <li>Максимална скорост: ~360 км/ч</li>
+      <li>0–100 км/ч: ~2.6 секунди</li>
+      <li>Тегло: ~798 кг (вкл. пилот)</li>
+    </ul>
+  </section>
 </body>
 </html>
+
